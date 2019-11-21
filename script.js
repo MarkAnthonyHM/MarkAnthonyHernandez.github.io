@@ -66,7 +66,7 @@ let missions = [
   "Working side by side, in the midst of community.  A shared office space for freelancers. We’ve created a place where anyone who would normally work from home or a coffee shop can work alongside one another in a quiet, focused, communal environment. This is a space for anyone, of any or no faith, looking for a more spiritually connected way to live and work.",
   "Being a creative professional or working remotely no longer means working from home. With access to every location, you're free from the monotony of working in the same neighborhood or space day after day.Working for a startup often means working for a company without an office. With a membership, you can focus, get work done, and hold meetings at any of our locations in your city.Office - GoersYou may have a desk in an office, but work still keeps you on the move. Membership gives you access to places to get work done between meetings or use as an alternative to working from home.",
   "The combination of a well-designed work environment and a well-organized work experience are part of the reason why clients seem to love our spaces. We give our clients the space and support to be their authentic best selves. Unlike our competitors, we provide our clients with our 5 star business addresses to register their business, a receptionist to answer calls in their company name, and a landline number totally provisioned by us – all in a sophisticated shared space with great views saturated in natural light.",
-  "We also provide access to a team of bilingual secretaries, ample meeting space easily bookable via an app, and color printing from any desk. The quality services and digital advantages we give to our clients ensure they can focus on growing their revenue. If our clients need IT assistance, they simply dial *1 on their handsets and a local IT expert will be right there to help. Happiness in business is simple IT solutions that work, a professional team to delegate to, and Community of like-minded Imagineeers to work with. Our clients are welcomed by our teams across 160 locations around the globe. You can’t beat.",
+  "We also provide access to a team of bilingual secretaries, ample meeting space easily bookable via an app, and color printing from any desk. The quality services and digital advantages we give to our clients ensure they can focus on growing their revenue. If our clients need IT assistance, they simply dial *1 on their handsets and a local IT expert will be right there to help. Happiness in business is simple IT solutions that work, a professional team to delegate to, and Community of like-minded Imagineeers to work with. Our clients are welcomed by our teams across 160 locations around the globe. You can’t beat."
 ];
 const activities = ["write in a journal", "go out for coffee"];
 const markovMissions = {};
@@ -96,7 +96,8 @@ const incompleteClause = [
   "around",
   "for",
   "this",
-  ","
+  ",",
+  "we"
 ];
 
 window.onload = function() {
@@ -149,7 +150,7 @@ function getMarkovText(markovChain, maxNumberWords) {
 function generate() {
   document.getElementById("id-mission").innerText = getMarkovText(
     markovMissions,
-    10
+    12
   );
   document.getElementById("id-activity").innerText =
     "Come and " + getMarkovText(markovActivities, 1);
