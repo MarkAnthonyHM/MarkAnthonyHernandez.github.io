@@ -148,7 +148,8 @@ function getMarkovText(markovChain, maxNumberWords) {
 
 function generate() {
   document.getElementById("id-mission").innerText = getMarkovText(
-    markovMissions, 10
+    markovMissions,
+    10
   );
   document.getElementById("id-activity").innerText =
     "Come and " + getMarkovText(markovActivities, 1);
